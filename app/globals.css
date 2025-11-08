@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+body {
+  @apply text-white bg-neutral-950;
+}
+
+/* ---- Imported from original index.css ---- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-800;
+  }
+}
+
+.sponsor-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-item p {
+  color: #f94eb2;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+.text-pink-400 {
+  color: #f94eb2 !important;
+}
+
+.bg-pink-400 {
+  background-color: #f94eb2 !important;
+}
+
+/* Target a specific element with a class, e.g., .custom-scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Adjust for desired thinness */
+  height: 8px; /* Adjust for desired thinness for horizontal scrollbars */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Scrollbar track color */
+}
+
+/* For Firefox, use scrollbar-width and scrollbar-color */
+.custom-scrollbar {
+  scrollbar-width: thin; /* 'thin' or 'auto' */
+  scrollbar-color: #888 transparent; /* thumb color track color */
+}
